@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 84" width="360" height="84">
+  <!-- Whimsical vine frame for the site title: curly vines above and below, with leaves and little flowers -->
+  <defs>
+    <g id="leaf">
+      <path d="M0 0 C4 -9 14 -9 18 0 C14 9 4 9 0 0 Z" fill="#9ccf9a" stroke="#7a5c4a" stroke-width="1.2"/>
+      <path d="M2 0 L15 0" stroke="#5e9b66" stroke-width="1"/>
+    </g>
+    <g id="bloom">
+      <g fill="#f6a8c0" stroke="#7a5c4a" stroke-width="1.1">
+        <circle cx="0" cy="-5" r="3.8"/>
+        <circle cx="4.8" cy="-1.5" r="3.8"/>
+        <circle cx="3" cy="4" r="3.8"/>
+        <circle cx="-3" cy="4" r="3.8"/>
+        <circle cx="-4.8" cy="-1.5" r="3.8"/>
+      </g>
+      <circle r="2.8" fill="#ffd96b" stroke="#7a5c4a" stroke-width="1"/>
+    </g>
+    <g id="bud">
+      <circle r="3.4" fill="#c9b6ff" stroke="#7a5c4a" stroke-width="1"/>
+      <circle r="1.2" fill="#fff3a0"/>
+    </g>
+  </defs>
+
+  <!-- Top vine -->
+  <path d="M6 22 C40 2 70 34 108 16 S176 2 214 18 S290 30 322 12 S348 14 354 24"
+        fill="none" stroke="#5e9b66" stroke-width="3" stroke-linecap="round"/>
+  <!-- Bottom vine -->
+  <path d="M6 62 C40 82 70 50 108 68 S176 82 214 66 S290 54 322 72 S348 70 354 60"
+        fill="none" stroke="#5e9b66" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Curly tendrils -->
+  <g fill="none" stroke="#5e9b66" stroke-width="2" stroke-linecap="round">
+    <path d="M70 26 q4 -12 12 -6 q5 7 -3 8"/>
+    <path d="M250 22 q4 -12 12 -6 q5 7 -3 8"/>
+    <path d="M70 58 q4 12 12 6 q5 -7 -3 -8"/>
+    <path d="M250 62 q4 12 12 6 q5 -7 -3 -8"/>
+    <path d="M178 10 q-3 -9 -10 -4 q-3 6 3 6"/>
+    <path d="M178 74 q-3 9 -10 4 q-3 -6 3 -6"/>
+  </g>
+
+  <!-- Leaves -->
+  <use href="#leaf" transform="translate(30 14) rotate(-40)"/>
+  <use href="#leaf" transform="translate(122 18) rotate(30)"/>
+  <use href="#leaf" transform="translate(196 8) rotate(-30)"/>
+  <use href="#leaf" transform="translate(292 24) rotate(35)"/>
+  <use href="#leaf" transform="translate(30 70) rotate(40)"/>
+  <use href="#leaf" transform="translate(122 66) rotate(-30)"/>
+  <use href="#leaf" transform="translate(196 76) rotate(30)"/>
+  <use href="#leaf" transform="translate(292 60) rotate(-35)"/>
+
+  <!-- Flowers and buds -->
+  <use href="#bloom" transform="translate(16 20)"/>
+  <use href="#bloom" transform="translate(100 18)"/>
+  <use href="#bloom" transform="translate(212 16)"/>
+  <use href="#bloom" transform="translate(338 14)"/>
+  <use href="#bloom" transform="translate(16 64)"/>
+  <use href="#bloom" transform="translate(150 70)"/>
+  <use href="#bloom" transform="translate(262 68)"/>
+  <use href="#bloom" transform="translate(338 70)"/>
+  <use href="#bud" transform="translate(60 12)"/>
+  <use href="#bud" transform="translate(160 12)"/>
+  <use href="#bud" transform="translate(310 24)"/>
+  <use href="#bud" transform="translate(60 72)"/>
+  <use href="#bud" transform="translate(240 76)"/>
+  <use href="#bud" transform="translate(310 62)"/>
+</svg>

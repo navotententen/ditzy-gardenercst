@@ -1,0 +1,555 @@
+/* custom font */
+@font-face {
+  font-family: "ButterflyFont";
+  src: url("../fonts/butterfly.ttf") format("truetype");
+  font-display: swap;
+}
+
+/* 2. Colour palette (change colours here only) */
+:root {
+  --cream: #fff8ec;
+  --pink: #f6a8c0;
+  --pink-dark: #e07a9e;
+  --green: #9ccf9a;
+  --green-dark: #5e9b66;
+  --yellow: #ffd96b;
+  --brown: #7a5c4a;
+  --white: #ffffff;
+}
+
+/* Base styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--cream);
+  color: var(--brown);
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "ButterflyFont", "Comic Sans MS", cursive;
+  color: var(--pink-dark);
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.6rem;
+}
+
+/* Header and navigation bar */
+.site-header {
+  background-color: var(--green);
+  border-bottom: 4px solid var(--brown);
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 360px;
+  max-width: 100%;
+  height: 84px;
+  padding: 0 1.2rem;
+  background: url("../images/logo-vines.svg") no-repeat center / 100% 100%;
+  color: var(--brown);
+  text-decoration: none;
+  font-family: "ButterflyFont", "Comic Sans MS", cursive;
+  font-size: 2rem;
+}
+
+.brand img {
+  width: 44px;
+  height: 44px;
+}
+
+.brand:hover .brand-text,
+.brand:focus .brand-text {
+  color: var(--pink-dark);
+}
+
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-list a {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--brown);
+  border-radius: 999px;
+  background-color: var(--cream);
+  color: var(--brown);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-list a:hover,
+.nav-list a:focus {
+  background-color: var(--yellow);
+}
+
+/* JavaScript adds this class to the link of the page you are on */
+.nav-list a.active {
+  background-color: var(--pink);
+}
+
+/* Main content */
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.card {
+  background-color: var(--white);
+  border: 3px solid var(--brown);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 6px 6px 0 var(--pink);
+}
+
+.hero {
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 2rem;
+  border: 3px solid var(--brown);
+  border-radius: 999px;
+  background-color: var(--yellow);
+  color: var(--brown);
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--pink);
+}
+
+/* Footer */
+.site-footer {
+  background-color: var(--green);
+  border-top: 4px solid var(--brown);
+  padding: 1.25rem 1.5rem;
+  font-size: 0.95rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.footer-grid h2 {
+  margin: 0 0 0.25rem;
+  color: var(--brown);
+  font-size: 1.3rem;
+}
+
+.footer-grid p {
+  margin: 0.15rem 0;
+}
+
+.footer-grid a {
+  color: var(--brown);
+  font-weight: bold;
+}
+
+.footer-note {
+  margin: 1rem 0 0;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+/*  Small screens */
+@media (max-width: 600px) {
+  .site-header {
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Home page feature cards  */
+.home-hero {
+  display: grid;
+  grid-template-columns: minmax(260px, 1fr) minmax(320px, 1.6fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.hero-card {
+  text-align: left;
+}
+
+.hero-card h1 {
+  margin-top: 0;
+}
+
+/* The welcome card gently bobs up and down */
+.floating {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+.home-scene {
+  padding: 0.75rem;
+}
+
+.home-scene canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+}
+
+/* "Start playing" button */
+.button-play {
+  position: relative;
+  margin-top: 1.5rem;
+  padding: 0.9rem 3.4rem;
+  background: linear-gradient(#ffe48a, #ffd96b);
+  font-size: 1.35rem;
+  box-shadow: 0 5px 0 var(--brown), 0 12px 18px rgba(122, 92, 74, 0.25);
+  animation: pulse 2.4s ease-in-out infinite;
+}
+
+.button-play::before,
+.button-play::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  background: url("../images/flower-small.svg") no-repeat center / contain;
+}
+
+.button-play::before {
+  left: -16px;
+  transform: rotate(-15deg);
+}
+
+.button-play::after {
+  right: -16px;
+  transform: rotate(15deg);
+}
+
+.button-play:hover,
+.button-play:focus {
+  background: linear-gradient(#ffc2d6, #f6a8c0);
+  transform: translateY(-3px) rotate(-1deg);
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Register and login */
+.form-card {
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.field {
+  margin-bottom: 1rem;
+}
+
+.field label {
+  display: block;
+  font-weight: bold;
+}
+
+.field input {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border: 2px solid var(--brown);
+  border-radius: 12px;
+  background-color: var(--cream);
+  color: var(--brown);
+  font-size: 1rem;
+}
+
+.field input:focus {
+  outline: 3px solid var(--yellow);
+}
+
+.hint {
+  margin: 0 0 0.25rem;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+/* Red message under a field when validation fails */
+.error {
+  min-height: 1.2em;
+  margin: 0.25rem 0 0;
+  color: #c0392b;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.form-message {
+  margin: 0;
+  border-radius: 12px;
+}
+
+.form-message.error,
+.form-message.success {
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--brown);
+}
+
+.form-message.error {
+  background-color: #fde2e2;
+}
+
+.form-message.success {
+  background-color: #dff3dc;
+  color: var(--green-dark);
+}
+
+/* 10. Logged-in status in the nav bar */
+.nav-greeting {
+  align-self: center;
+  font-weight: bold;
+}
+
+.nav-logout {
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--brown);
+  border-radius: 999px;
+  background-color: var(--yellow);
+  color: var(--brown);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.nav-logout:hover,
+.nav-logout:focus {
+  background-color: var(--pink);
+}
+
+/* Links inside page text */
+main p a {
+  color: var(--pink-dark);
+  font-weight: bold;
+}
+
+/* Utility */
+.hidden {
+  display: none !important; /* !important so it always beats other display rules */
+}
+
+/* Game page  */
+.game-card {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+/* The stage holds the canvas with the start/results overlay on top of it */
+.game-stage {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border: 4px solid var(--brown);
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: var(--green);
+}
+
+.game-stage canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.game-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: rgba(255, 248, 236, 0.93);
+  text-align: center;
+}
+
+.game-overlay h2 {
+  margin: 0 0 0.5rem;
+  font-size: 2rem;
+}
+
+.game-overlay p {
+  margin: 0.25rem 0;
+}
+
+.overlay-link {
+  margin-top: 0.75rem;
+  color: var(--pink-dark);
+  font-weight: bold;
+}
+
+/* The funny message line under the canvas */
+.game-message {
+  margin: 1rem auto;
+  padding: 0.75rem 1rem;
+  max-width: 800px;
+  border: 2px solid var(--brown);
+  border-radius: 999px;
+  background-color: var(--cream);
+  text-align: center;
+  font-weight: bold;
+}
+
+.game-help {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.game-help ul {
+  padding-left: 1.2rem;
+}
+
+.button.small {
+  margin-top: 0;
+  padding: 0.35rem 1.1rem;
+  font-size: 0.95rem;
+}
+
+/* Rankings table */
+.rank-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.rank-table th,
+.rank-table td {
+  padding: 0.6rem 0.8rem;
+  border-bottom: 2px solid var(--cream);
+  text-align: left;
+}
+
+.rank-table th {
+  background-color: var(--green);
+  font-family: "ButterflyFont", "Comic Sans MS", cursive;
+  font-weight: normal;
+}
+
+.rank-table tbody tr:nth-child(odd) {
+  background-color: #fffaf2;
+}
+
+.rank-table tbody tr:first-child td:first-child {
+  font-weight: bold;
+  color: var(--pink-dark);
+}
+
+/* The row of the logged-in player */
+.rank-table .rank-you {
+  background-color: var(--yellow);
+  font-weight: bold;
+}
+
+/* Pop-up notifications inside the game */
+.game-toasts {
+  position: absolute;
+  top: calc(12.5% + 10px);
+  left: 50%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  width: 90%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.toast {
+  margin: 0;
+  padding: 0.5rem 1.4rem;
+  border: 3px solid var(--brown);
+  border-radius: 999px;
+  background-color: var(--cream);
+  box-shadow: 0 4px 0 rgba(122, 92, 74, 0.35);
+  font-weight: bold;
+  text-align: center;
+  animation: toast-in 0.25s ease-out;
+}
+
+.toast.good {
+  background-color: #dff3dc;
+  color: #2f7a3d;
+}
+
+.toast.warn {
+  background-color: #fde2e2;
+  color: #a8322a;
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(-12px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

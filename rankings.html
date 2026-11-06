@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rankings | Ditzy Gardener</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Header and navigation bar (the same on every page) -->
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Ditzy Gardener home">
+      <img src="images/logo.svg" alt="">
+      <span class="brand-text">Ditzy Gardener</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="game.html">Play</a></li>
+        <li><a href="rankings.html">Rankings</a></li>
+      </ul>
+    </nav>
+  </header>
+ 
+  <!-- Main content -->
+  <main>
+    <!-- Rankings table -->
+    <section class="card">
+      <h1>Shop Rankings</h1>
+      <p>The best flower shops in the garden, ranked by top score.</p>
+      <p class="hint" id="rank-empty"></p>
+      <table class="rank-table" id="rank-table">
+        <thead>
+          <tr>
+            <th scope="col">Rank</th>
+            <th scope="col">Shop name</th>
+            <th scope="col">Owner</th>
+            <th scope="col">Top score</th>
+            <th scope="col">Best shop rating</th>
+          </tr>
+        </thead>
+        <tbody id="rank-body"></tbody>
+      </table>
+    </section>
+  </main>
+ 
+  <!-- Footer (the same on every page) -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <section>
+        <h2>Contact us</h2>
+        <p>999 Triangle</p>
+        <p><a href="mailto:ditzygarden@game.co">ditzygarden@game.co</a></p>
+      </section>
+      <section>
+        <h2>About the founder</h2>
+        <p>She deserves a first class. She is sooo cool and amazing!</p>
+      </section>
+    </div>
+    <p class="footer-note">Ditzy Gardener &mdash; make bouquets, dodge bees, keep customers happy.</p>
+  </footer>
+ 
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/rankings.js"></script>
+</body>
+</html>
